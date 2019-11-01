@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="styles/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/7311df490f.js" integrity="sha384-oDvhHAiExTfmcX9h/DT0+Eibx0CQAhqTj+JLYfNHLjfJ2c6IQfDAbX4LuZswwcUA" crossorigin="anonymous"></script>
+    <title>tic Tac toe</title>
+</head>
+<body>
+    <header class="slide">
+        <i class="fas fa-bars" onClick = "toggleClass()"></i>
+        <div class="endGame">Select Difficulty</div>    
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        <button id ="start" onclick="disable(); startGame(difficulty.value);">Start</button>
+        <div class="game flex" id="main">
+            <div class="box" id="0"><p></p></div>
+            <div class="box" id="1"><p></p></div>
+            <div class="box" id="2"><p></p></div>
+            <div class="box" id="3"><p></p></div>
+            <div class="box" id="4"><p></p></div>
+            <div class="box" id="5"><p></p></div>
+            <div class="box" id="6"><p></p></div>
+            <div class="box" id="7"><p></p></div>
+            <div class="box" id="8"><p></p></div>
+        </div>
+        <nav class = "slide">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="game.js"></script>
+    <script>
+        function toggleClass() {
+            var slide = document.querySelectorAll(".slide");
+            function slow() {
+                slide[1].classList.remove("active");
+            }
+            if (slide[1].classList.contains("active")){
+                setTimeout(slow, 500);
+            }
+        
+            slide[1].classList.add("active");
+            slide[0].classList.toggle("active");
+        }
+        function disable() {
+            document.getElementById("difficulty").disabled = true;
+        }
+    </script>
+</body>
+</html>

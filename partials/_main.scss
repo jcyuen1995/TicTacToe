@@ -1,0 +1,146 @@
+// * {
+//     outline: red 1px solid;
+// }
+header {
+    background: linear-gradient(to top left, #56ccf2, #2f80ed);;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 5% 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    right: 0;
+    transition: all 0.5s;
+
+    i {
+        position: absolute;
+        top: 0 + 2%;
+        right: 0 + 2%;
+        font-size: 2rem;
+    }
+
+    select {
+        width: 10%;
+        margin: 0 40%;
+        text-align: center;
+        appearance: none;
+    }
+
+    .game {
+        width: 20%;
+        margin: 0 40%;
+        height: 30%;
+        flex-wrap: wrap;
+
+        div {
+            width: 33.33%; 
+            height: 33.33%;
+            padding: 4% 0;
+            text-align: center;
+            color: #202020;
+            font-weight: bold;
+            font-size: 3rem; 
+            transition:all 1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p { 
+                opacity: 0; 
+                text-align:center
+            }
+            p.show { opacity: 1; transition: all 1s;}
+
+        }
+        
+        div:nth-child(3n + 1) {
+            border-right: solid white 3px;
+        }
+
+        div:nth-child(3n + 2) {
+            border-right: solid white 3px;
+        }
+
+        div:nth-child(-n+3) {
+            border-bottom: solid white 3px;
+        }
+
+        div:nth-child(n+4) {
+            border-bottom: solid white 3px;
+        }
+        div:nth-child(n+7) {
+            border-bottom: none;
+        }
+    }
+
+    .endGame {
+        opacity: 1;
+        width: 20%;
+        text-align: center;
+        padding: 1% 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+        background-color: rgba(32,32,32,0.8);
+        transition: all 1.5s;
+    }
+
+    .invis {
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    button {
+        width: 15%;
+        padding: 1% 4%;
+        font-size: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        background-color:rgba(32,32,32,0.8)  ;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+    
+    button:hover {background-color:rgba(15,15,15,0.8) }
+    
+    button:active {
+        background-color:rgba(15,15,15,0.8) ;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    nav {
+        display:none;
+        background-color: #202020;
+        color: white;
+        position: absolute;
+        height: 100vh;
+        width: 10vw;
+        right: -10%;
+        transition: all 0.5s;
+        ul{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            height: 100vh;
+            li {
+                padding: 20% 5%;
+                text-align: center;
+            }
+        }
+        &.active {
+            display: block;
+        }
+    }
+    &.active {
+        right: 10%;
+        
+    }
+}
