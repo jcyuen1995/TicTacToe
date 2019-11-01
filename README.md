@@ -2,7 +2,7 @@
 Simple Javascript TicTacToe
 
 ## Requires
-- prepros
+- Prepros
 
 ### About
 Demonstrates:
