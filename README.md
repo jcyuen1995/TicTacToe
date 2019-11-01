@@ -1,7 +1,10 @@
 # TicTacToe
 Simple Javascript TicTacToe
 
-## About
+## Requires
+- prepros
+
+### About
 Demonstrates:
 - Use of scss to create complex css
 - Advanced javascript knowledge
