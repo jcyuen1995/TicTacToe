@@ -1,5 +1,5 @@
 # TicTacToe
-Simple Javascript TicTacToe
+Simple Javascript TicTacToe application
 
 ## Requires
 - Prepros
